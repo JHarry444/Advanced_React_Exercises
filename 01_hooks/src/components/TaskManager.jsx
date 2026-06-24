@@ -14,7 +14,6 @@ function reducer(state, action) {
 }
 
 export default function TaskManager() {
-
     // TODO: 3. initialise a new reducer with useReducer
 
 
@@ -40,7 +39,7 @@ export default function TaskManager() {
                     name="addTask"
                     type="text"
                     placeholder="Add a task..."
-                    ref={taskRef}
+                // TODO: 3. Add the ref to the input element
                 />
                 <button>Add</button>
             </form>
