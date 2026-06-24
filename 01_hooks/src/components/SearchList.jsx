@@ -24,7 +24,7 @@ export default function SearchList() {
     console.log("Running expensive filter/sort...");
 
     // simulate heavy work
-    for (let i = 0; i < 30000000; i++) {}
+    for (let i = 0; i < 30_000_000; i++) { }
 
     return ITEMS
       .filter(item => item.name.toLowerCase().includes(query.toLowerCase()))

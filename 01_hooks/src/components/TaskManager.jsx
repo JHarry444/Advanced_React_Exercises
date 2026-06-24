@@ -7,33 +7,16 @@ const initialState = {
 
 function reducer(state, action) {
     switch (action.type) {
-        case "ADD_TASK":
-            return {
-                ...state,
-                tasks: [...state.tasks, { id: Date.now(), text: action.payload, done: false }]
-            };
-
-        case "TOGGLE_TASK":
-            return {
-                ...state,
-                tasks: state.tasks.map(t =>
-                    t.id === action.payload ? { ...t, done: !t.done } : t
-                )
-            };
-
-        case "CLEAR_COMPLETED":
-            return {
-                ...state,
-                tasks: state.tasks.filter(t => !t.done)
-            };
-
+        // TODO: 5. Add the action types
         default:
             return state;
     }
 }
 
 export default function TaskManager() {
+
     // TODO: 3. initialise a new reducer with useReducer
+
 
     // TODO: 3. create a ref for the input element
 
@@ -57,6 +40,7 @@ export default function TaskManager() {
                     name="addTask"
                     type="text"
                     placeholder="Add a task..."
+                    ref={taskRef}
                 />
                 <button>Add</button>
             </form>
