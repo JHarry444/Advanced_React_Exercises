@@ -8,8 +8,6 @@ const initialState = {
 function reducer(state, action) {
     switch (action.type) {
         // TODO: 5. Add the action types
-        default:
-            return state;
     }
 }
 
